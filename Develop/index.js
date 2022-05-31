@@ -76,8 +76,15 @@ let questions = [
     },
   ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// Prompts questions to user
+function promptQuestions() {
+  return inquirer.prompt(questions);
+}
+
+// Writes README file
+function writeToFile(fileName, data) {
+  return writeFileAsync(fileName, data);
+}
 
 // TODO: Create a function to initialize app
 function init() {}
