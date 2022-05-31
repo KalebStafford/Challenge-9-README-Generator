@@ -86,8 +86,12 @@ function writeToFile(fileName, data) {
   return writeFileAsync(fileName, data);
 }
 
-// TODO: Create a function to initialize app
-function init() {}
+//Initializes App
+async function init() {
+  let userData = await promptQuestions();
+  let outputData = generateMarkdown(userData);
+  await writeToFile("../NewREADME.md", outputData);
+}
 
 // Function call to initialize app
 init();
