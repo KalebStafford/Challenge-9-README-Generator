@@ -12,8 +12,69 @@ let inquirer = require("inquirer");
 
 // creates generateMarkdown function from generateMarkdown.js in the Utils folder
 let generateMarkdown = require("./utils/generateMarkdown");
-// TODO: Create an array of questions for user input
-const questions = [];
+// Array of questions for user input
+let questions = [
+    {
+      type: "input",
+      message: "Title?",
+      name: "Title",
+    },
+    {
+      type: "input",
+      message: "Description?",
+      name: "Description",
+    },
+    {
+      type: "input",
+      message: "Steps required to install your project?",
+      name: "Installation",
+    },
+    {
+      type: "input",
+      message: "Instructions for use?",
+      name: "Use",
+    },
+    {
+      type: "input",
+      message: "Your Github username?",
+      name: "GithubUsername",
+    },
+    {
+      type: "input",
+      message: "Collaborators?",
+      name: "Collaborators",
+    },
+    {
+      type: "input",
+      message: "License?",
+      name: "License",
+    },
+    {
+      type: "input",
+      message: "Badge Label?",
+      name: "BadgeLabel",
+    },
+    {
+      type: "input",
+      message: "Badge Message?",
+      name: "BadgeMessage",
+    },
+    {
+      type: "list",
+      message: "Badge Color?",
+      name: "BadgeColor",
+      choices: [
+        "brightgreen",
+        "green",
+        "yellowgreen",
+        "yellow",
+        "orange",
+        "red",
+        "lightgrey",
+        "blue",
+      ],
+    },
+  ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
